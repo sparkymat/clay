@@ -9,9 +9,8 @@ var templates = typewriter.TemplateSlice{
 var set = &typewriter.Template{
 	Name: "ModelGenerator",
 	Text: `
-// Clear clears the entire set to be the empty set.
-func (set *{{.Name}}Set) Clear() {
-	*set = make({{.Name}}Set)
+// Retrieves an object by id
+func {{.Name}}ByIdentifier({{.PrimaryKey}} int64) {
 }
 `,
 	TypeConstraint: typewriter.Constraint{Comparable: true},
